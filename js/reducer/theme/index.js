@@ -1,0 +1,13 @@
+import Types from '../../action/types';
+const initailState = {
+  theme: 'cyan'
+};
+
+export default function onAction (state = initailState, action) {
+  switch (action.type) {
+    case Types.THEME_CHANGE:
+      return { ...state, theme: action.theme }
+    default:
+      return state;
+  }
+}
